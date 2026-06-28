@@ -38,4 +38,5 @@ export const NAV_LINKS: NavLink[] = [
   { href: "/app/services", label: "Services", icon: Sparkles, soon: true },
   { href: "/app/settings", label: "Settings", icon: Settings },
   { href: "/app/admin", label: "Admin", icon: ShieldCheck, adminOnly: true },
+  { href: "/app/admin/requests", label: "Requests", icon: ShieldCheck, adminOnly: true },
 ];

@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
       } = await supabase.auth.getUser();
       if (!(await isEmailAllowed(user?.email))) {
         await supabase.auth.signOut();
-        return NextResponse.redirect(`${origin}/login?error=not_allowed`);
+        return NextResponse.redirect(`${origin}/members-only`);
       }
       return NextResponse.redirect(`${origin}${redirectTo}`);
     }

@@ -71,6 +71,20 @@ export function PostCard({ post, myId }: { post: FeedPost; myId: string }) {
                 {STAGE_META[post.author.current_stage]?.label ?? post.author.current_stage}
               </Badge>
             ) : null}
+            {post.author?.linkedin_url ? (
+              <a
+                href={post.author.linkedin_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+                className="text-text-subtle hover:text-brand"
+                aria-label="LinkedIn profile"
+              >
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden>
+                  <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/>
+                </svg>
+              </a>
+            ) : null}
             <span className="text-xs text-text-subtle">· {timeAgo(post.created_at)}</span>
             <span className="ml-auto text-[11px] text-text-subtle">{CATEGORY_LABELS[post.category] ?? post.category}</span>
           </div>

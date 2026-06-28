@@ -29,6 +29,11 @@ function stubProfile(): Profile {
     visa_status: null,
     has_offer: false,
     target_salary_aed: 15000,
+    target_salary_band: "8-12",
+    primary_reason_other: null,
+    pre_ca_years: 1,
+    post_ca_years: 2,
+    linkedin_url: null,
     onboarded: true,
     created_at: now,
     updated_at: now,
@@ -50,7 +55,7 @@ export async function requireUser() {
   if (!user) redirect("/login");
   if (!(await isEmailAllowed(user.email))) {
     await supabase.auth.signOut();
-    redirect("/login?error=not_allowed");
+    redirect("/members-only");
   }
   return { user, supabase };
 }

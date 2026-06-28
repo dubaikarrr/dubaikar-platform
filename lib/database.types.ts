@@ -11,7 +11,16 @@ export type Stage =
   | "arrive"
   | "settle";
 
-export type PrimaryReason = "employment" | "business" | "freelance" | "family";
+/**
+ * New onboarding (B1) writes only "employment" or "other". Legacy values
+ * remain in the union so older rows still typecheck.
+ */
+export type PrimaryReason =
+  | "employment"
+  | "other"
+  | "business"
+  | "freelance"
+  | "family";
 export type LeadType =
   | "accommodation"
   | "visa"
@@ -35,6 +44,16 @@ export type Profile = {
   visa_status: string | null;
   has_offer: boolean;
   target_salary_aed: number | null;
+  /** "4-6", "6-8", "8-12", "12-15", "15+" in AED thousands per month. */
+  target_salary_band: string | null;
+  /** Free-text reason if primary_reason = 'other'. */
+  primary_reason_other: string | null;
+  /** Years of work experience before CA qualification. */
+  pre_ca_years: number | null;
+  /** Years of work experience after CA qualification. */
+  post_ca_years: number | null;
+  /** Profile-completion (LinkedIn + phone). */
+  linkedin_url: string | null;
   onboarded: boolean;
   created_at: string;
   updated_at: string;
@@ -180,6 +199,7 @@ export type MemberProfile = {
   current_stage: Stage;
   industry: string | null;
   target_move_date: string | null;
+  linkedin_url: string | null;
 };
 
 /** Shape stored in resumes.data (jsonb). */

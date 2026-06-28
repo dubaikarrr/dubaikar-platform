@@ -20,6 +20,7 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar } from "@/components/ui/avatar";
 import { ButtonLink } from "@/components/ui/button";
 import { JourneyChecklist } from "@/components/dashboard/journey-checklist";
+import { QuickTour, RetakeTourButton } from "@/components/dashboard/quick-tour";
 
 export const metadata: Metadata = { title: "Dashboard" };
 
@@ -92,10 +93,14 @@ export default async function DashboardPage() {
 
   return (
     <div className="space-y-6">
+      <QuickTour />
       {/* Greeting + countdown */}
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-text">Hi {firstName} 👋</h1>
+          <div className="flex items-center gap-3">
+            <h1 className="text-text">Hi {firstName} 👋</h1>
+            <RetakeTourButton />
+          </div>
           <p className="text-sm text-text-muted">
             You&apos;re in the{" "}
             <span className="font-medium text-brand">{STAGE_META[profile.current_stage].label}</span>{" "}
@@ -107,7 +112,7 @@ export default async function DashboardPage() {
             <CalendarDays className="h-5 w-5 text-brand" />
             <div>
               <p className="text-lg font-medium leading-tight text-text tnum">{countdown.days} days</p>
-              <p className="text-[11px] text-text-subtle">{countdown.past ? "past your target date" : "to your target move date"}</p>
+              <p className="text-[11px] text-text-subtle">{countdown.past ? "past your target date" : "countdown to land in Dubai"}</p>
             </div>
           </div>
         ) : null}

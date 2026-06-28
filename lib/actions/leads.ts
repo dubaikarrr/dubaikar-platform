@@ -30,7 +30,42 @@ export async function createLead(
   });
 
   if (error) return { ok: false, error: error.message };
+
+  // Fire-and-forget admin email alert. No-ops silently if RESEND_API_KEY +
+  // ADMIN_ALERT_EMAIL aren't configured; the lead row is still saved either way.
+  notifyAdminsOfLead(type, payload, user.email ?? null).catch(() => {});
+
   return { ok: true };
+}
+
+async function notifyAdminsOfLead(
+  type: LeadType,
+  payload: Record<string, unknown>,
+  fromEmail: string | null,
+): Promise<void> {
+  const key = process.env.RESEND_API_KEY;
+  const to = (process.env.ADMIN_ALERT_EMAIL ?? process.env.ADMIN_EMAILS ?? "")
+    .split(",").map((s) => s.trim()).filter(Boolean);
+  if (!key || to.length === 0) return;
+
+  await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      from: "Dubaikar <alerts@dubaikar.com>",
+      to,
+      subject: `New ${type} request on Dubaikar`,
+      text: [
+        `Type: ${type}`,
+        `From: ${fromEmail ?? "unknown"}`,
+        "",
+        "Payload:",
+        JSON.stringify(payload, null, 2),
+        "",
+        "Review and respond at https://dubaikar.com/app/admin/requests",
+      ].join("\n"),
+    }),
+  });
 }
 
 /** The current user's service requests, newest first. */

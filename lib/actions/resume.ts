@@ -114,7 +114,12 @@ export async function deleteResume(id: string) {
 /** Create a resume then redirect into its editor (for the "New resume" button). */
 export async function createAndEditResume() {
   const id = await createResume();
-  if (id) redirect(`/app/resume/${id}`);
+  if (!id) {
+    // Most likely the profile row is missing or auth dropped. Send the user
+    // somewhere they can recover rather than silently no-op.
+    redirect("/app/onboarding?reason=resume_create_failed");
+  }
+  redirect(`/app/resume/${id}`);
 }
 
 /** Persist resume data + ATS score. Template lives in data.style.template. */
