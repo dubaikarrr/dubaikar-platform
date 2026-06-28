@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="Sample Dubai-ready resumes">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF7EE"/>
+      <stop offset="1" stop-color="#FFE7CF"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#1A1D3E" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .h{font:700 13px 'DM Sans',system-ui,sans-serif;fill:#1A1D3E}
+      .n{font:800 18px 'DM Sans',system-ui,sans-serif;fill:#1A1D3E}
+      .nw{font:800 18px 'DM Sans',system-ui,sans-serif;fill:#fff}
+      .s{font:600 9px 'DM Sans',system-ui,sans-serif;fill:#FF6B35;letter-spacing:1.2px}
+      .sw{font:600 9px 'DM Sans',system-ui,sans-serif;fill:#FFB07A;letter-spacing:1.2px}
+      .t{font:400 8.5px 'DM Sans',system-ui,sans-serif;fill:#4B5563}
+      .tw{font:400 8.5px 'DM Sans',system-ui,sans-serif;fill:#E5E7EB}
+      .chip{font:600 8px 'DM Sans',system-ui,sans-serif;fill:#FF6B35}
+    </style>
+  </defs>
+
+  <rect width="900" height="620" fill="url(#bg)"/>
+
+  <!-- RESUME 1: Corporate navy header (back-left, rotated) -->
+  <g transform="translate(60,90) rotate(-7)" filter="url(#shadow)">
+    <rect width="280" height="380" rx="10" fill="#fff"/>
+    <rect width="280" height="84" rx="10" fill="#1A1D3E"/>
+    <rect y="74" width="280" height="10" fill="#1A1D3E"/>
+    <text x="20" y="38" class="nw">PRIYA SHARMA</text>
+    <text x="20" y="56" class="sw">SENIOR ACCOUNTANT · DUBAI</text>
+    <text x="20" y="70" class="tw">priya.sharma@email.com · +971 50 123 4567</text>
+    <!-- bar heading -->
+    <rect x="20" y="108" width="240" height="14" fill="#FF6B35"/>
+    <text x="26" y="118" class="sw" fill="#fff">EXPERIENCE</text>
+    <text x="20" y="140" class="h">Senior Accountant · EY Dubai</text>
+    <text x="20" y="153" class="t">2022 – Present · Audit &amp; assurance for UAE retail clients</text>
+    <text x="20" y="166" class="t">• Led IFRS reporting for AED 80M portfolio</text>
+    <text x="20" y="178" class="t">• Mentored 4 associates through busy season</text>
+    <text x="20" y="195" class="h">Accountant · Deloitte Mumbai</text>
+    <text x="20" y="208" class="t">2019 – 2022 · Statutory audits, tax filings, GST</text>
+    <rect x="20" y="230" width="240" height="14" fill="#FF6B35"/>
+    <text x="26" y="240" class="sw" fill="#fff">EDUCATION</text>
+    <text x="20" y="262" class="h">CA · ICAI</text>
+    <text x="20" y="274" class="t">All India Rank 47 · 2019</text>
+    <text x="20" y="290" class="h">B.Com · Mumbai University</text>
+    <rect x="20" y="312" width="240" height="14" fill="#FF6B35"/>
+    <text x="26" y="322" class="sw" fill="#fff">SKILLS</text>
+    <g font-family="DM Sans" font-size="8" font-weight="600">
+      <rect x="20" y="334" width="48" height="16" rx="8" fill="#FFE7CF"/><text x="44" y="345" text-anchor="middle" class="chip">IFRS</text>
+      <rect x="74" y="334" width="48" height="16" rx="8" fill="#FFE7CF"/><text x="98" y="345" text-anchor="middle" class="chip">SAP</text>
+      <rect x="128" y="334" width="58" height="16" rx="8" fill="#FFE7CF"/><text x="157" y="345" text-anchor="middle" class="chip">VAT UAE</text>
+      <rect x="192" y="334" width="68" height="16" rx="8" fill="#FFE7CF"/><text x="226" y="345" text-anchor="middle" class="chip">CORP TAX</text>
+    </g>
+  </g>
+
+  <!-- RESUME 2: Modern Sidebar (center, accent rail) -->
+  <g transform="translate(310,40)" filter="url(#shadow)">
+    <rect width="280" height="500" rx="10" fill="#fff"/>
+    <rect width="96" height="500" rx="10" fill="#FF6B35"/>
+    <rect x="86" width="10" height="500" fill="#FF6B35"/>
+    <!-- photo circle -->
+    <circle cx="48" cy="56" r="28" fill="#FFE7CF"/>
+    <text x="48" y="60" text-anchor="middle" font-family="DM Sans" font-size="22" font-weight="700" fill="#1A1D3E">RK</text>
+    <!-- sidebar content -->
+    <text x="48" y="106" text-anchor="middle" class="nw" font-size="14">RAHUL KUMAR</text>
+    <text x="48" y="122" text-anchor="middle" class="sw" font-size="7" fill="#fff">SOFTWARE ENGINEER</text>
+    <text x="14" y="148" class="sw" fill="#fff">CONTACT</text>
+    <text x="14" y="162" class="tw" fill="#fff">+971 55 888 1234</text>
+    <text x="14" y="174" class="tw" fill="#fff">rahul@email.com</text>
+    <text x="14" y="186" class="tw" fill="#fff">JLT, Dubai</text>
+    <text x="14" y="210" class="sw" fill="#fff">SKILLS</text>
+    <g fill="#fff" font-family="DM Sans" font-size="8">
+      <text x="14" y="224">• React / Next.js</text>
+      <text x="14" y="236">• Node · TypeScript</text>
+      <text x="14" y="248">• AWS · Docker</text>
+      <text x="14" y="260">• PostgreSQL</text>
+    </g>
+    <text x="14" y="284" class="sw" fill="#fff">LANGUAGES</text>
+    <text x="14" y="298" class="tw" fill="#fff">English · Hindi</text>
+    <text x="14" y="310" class="tw" fill="#fff">Arabic (basic)</text>
+
+    <!-- main column -->
+    <text x="116" y="40" class="s">PROFESSIONAL SUMMARY</text>
+    <text x="116" y="58" class="t">5+ years building production web apps. Moved to</text>
+    <text x="116" y="70" class="t">Dubai in 2024. Open to fintech &amp; e-commerce roles.</text>
+
+    <text x="116" y="100" class="s">EXPERIENCE</text>
+    <line x1="116" y1="106" x2="266" y2="106" stroke="#FF6B35" stroke-width="1"/>
+    <text x="116" y="122" class="h">Senior Engineer · Careem</text>
+    <text x="116" y="134" class="t">2024 – Present · Dubai</text>
+    <text x="116" y="148" class="t">• Shipped payments retry pipeline (+18% success)</text>
+    <text x="116" y="160" class="t">• Owned Ride Plus onboarding flow</text>
+
+    <text x="116" y="184" class="h">Engineer · Razorpay</text>
+    <text x="116" y="196" class="t">2021 – 2024 · Bengaluru</text>
+    <text x="116" y="210" class="t">• Built merchant dashboard used by 12k+ businesses</text>
+
+    <text x="116" y="240" class="s">EDUCATION</text>
+    <line x1="116" y1="246" x2="266" y2="246" stroke="#FF6B35" stroke-width="1"/>
+    <text x="116" y="262" class="h">B.Tech CSE · BITS Pilani</text>
+    <text x="116" y="274" class="t">2017 – 2021 · CGPA 8.7</text>
+
+    <text x="116" y="304" class="s">CERTIFICATIONS</text>
+    <line x1="116" y1="310" x2="266" y2="310" stroke="#FF6B35" stroke-width="1"/>
+    <text x="116" y="326" class="t">AWS Solutions Architect Associate</text>
+    <text x="116" y="338" class="t">Google Cloud Professional Developer</text>
+  </g>
+
+  <!-- RESUME 3: Minimalist serif (back-right, rotated) -->
+  <g transform="translate(620,110) rotate(6)" filter="url(#shadow)">
+    <rect width="240" height="360" rx="10" fill="#fff"/>
+    <text x="120" y="44" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1A1D3E">ANJALI MEHTA</text>
+    <text x="120" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-style="italic" fill="#4B5563">Marketing Manager</text>
+    <line x1="40" y1="74" x2="200" y2="74" stroke="#1A1D3E" stroke-width="0.7"/>
+    <text x="120" y="88" text-anchor="middle" class="t" font-size="8">anjali@email.com · +971 52 444 9988 · Marina</text>
+
+    <text x="20" y="116" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#1A1D3E" letter-spacing="2">EXPERIENCE</text>
+    <line x1="20" y1="122" x2="220" y2="122" stroke="#FF6B35" stroke-width="0.5"/>
+    <text x="20" y="138" class="h" font-size="10">Marketing Manager · Talabat</text>
+    <text x="20" y="150" class="t">2023 – Present</text>
+    <text x="20" y="164" class="t">• Grew app installs 34% YoY across UAE</text>
+    <text x="20" y="176" class="t">• Managed AED 4M paid acquisition budget</text>
+
+    <text x="20" y="200" class="h" font-size="10">Brand Lead · Swiggy</text>
+    <text x="20" y="212" class="t">2020 – 2023 · Bengaluru</text>
+    <text x="20" y="224" class="t">• Launched Instamart campaign reaching 40M users</text>
+
+    <text x="20" y="252" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#1A1D3E" letter-spacing="2">EDUCATION</text>
+    <line x1="20" y1="258" x2="220" y2="258" stroke="#FF6B35" stroke-width="0.5"/>
+    <text x="20" y="274" class="h" font-size="10">MBA · IIM Bangalore</text>
+    <text x="20" y="286" class="t">2018 – 2020</text>
+
+    <text x="20" y="312" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#1A1D3E" letter-spacing="2">SKILLS</text>
+    <line x1="20" y1="318" x2="220" y2="318" stroke="#FF6B35" stroke-width="0.5"/>
+    <text x="20" y="334" class="t">Brand · Performance · Lifecycle · GA4 · Looker</text>
+  </g>
+
+  <!-- ATS score badge -->
+  <g transform="translate(740,40)">
+    <circle cx="50" cy="50" r="46" fill="#fff" filter="url(#shadow)"/>
+    <circle cx="50" cy="50" r="40" fill="none" stroke="#E5E7EB" stroke-width="6"/>
+    <circle cx="50" cy="50" r="40" fill="none" stroke="#FF6B35" stroke-width="6" stroke-linecap="round" stroke-dasharray="226 251" transform="rotate(-90 50 50)"/>
+    <text x="50" y="48" text-anchor="middle" font-family="DM Sans" font-size="20" font-weight="800" fill="#1A1D3E">92</text>
+    <text x="50" y="64" text-anchor="middle" font-family="DM Sans" font-size="7" font-weight="700" fill="#FF6B35" letter-spacing="1">ATS SCORE</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="450" y="588" text-anchor="middle" font-family="DM Sans" font-size="13" font-weight="700" fill="#1A1D3E">Dubai-ready templates · ATS scored · One-click PDF</text>
+</svg>
