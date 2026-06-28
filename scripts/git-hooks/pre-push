@@ -1,0 +1,30 @@
+#!/bin/sh
+# Dubaikar: block direct pushes to main. Use feature branches + PRs.
+# See README / collaboration guide.
+
+protected='main'
+
+while read local_ref local_sha remote_ref remote_sha; do
+  case "$remote_ref" in
+    refs/heads/"$protected")
+      echo ""
+      echo "Direct push to '$protected' is blocked."
+      echo ""
+      echo "  Open a feature branch, push it, and create a PR on GitHub:"
+      echo "    git checkout -b feat/<short-name>"
+      echo "    git push -u origin feat/<short-name>"
+      echo ""
+      echo "  Then open: https://github.com/dubaikarrr/dubaikar-platform/pulls"
+      echo ""
+      echo "  Vercel will auto-build a preview URL for your branch."
+      echo "  Merge the PR after review, prod deploys automatically."
+      echo ""
+      echo "  If you really need to bypass once (e.g. emergency rollback):"
+      echo "    git push --no-verify"
+      echo ""
+      exit 1
+      ;;
+  esac
+done
+
+exit 0
